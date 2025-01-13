@@ -1,0 +1,50 @@
+site_name: Kubernetes Documentation
+
+nav:
+  - Kubernetes:
+    - Kubernetes/25) Publier et exposer les ports.md
+    - Kubernetes/Chap 10 Projet 3/Projet 3 PV PVC et StatefulSet NGINX PHP MySQL DOKS et AKS.md
+    - Kubernetes/Chap 11 Gestion des configuration/Gestion des configurations.md
+    - Kubernetes/Chap 12 Projet 4/Projet 4 ConfigMap et Secret (AKS).md
+    - Kubernetes/Chap 13 Ordonnancement avancer des Pods et des Nods/Ordonnancement avancé des Pods et des Nodes.md
+    - Kubernetes/Chap 14 Loggin et monitoring avec kubernetes/Logging et Monitoring avec Kubernetes.md
+    - Kubernetes/Chap 15 Utilisation de TLS avec Kubernetes/Utilisation de TLS avec Kubernetes.md
+    - Kubernetes/Chap 16 Les taches avec Kubernetes/Les tâches avec Kubernetes.md
+    - Kubernetes/Chap 17 Introduction avec Helm/Introduction à Helm.md
+    - Kubernetes/Chap 18 Projet 5/Projet 5 Projet complet GKE.md
+    - Kubernetes/Chap 19 Git Ops avec Argo CD (GKE)/GitOps avec Argo CD (GKE).md
+    - Kubernetes/Chap 1 Introduction Kubernetes/a) Introduction à la Stack DevOps.md
+    - Kubernetes/Chap 1 Introduction Kubernetes/b) Qu'est ce que Kubernetes.md
+    - Kubernetes/Chap 1 Introduction Kubernetes/c) L'architecture de Kubernetes.md
+    - Kubernetes/Chap 1 Introduction Kubernetes/d) Explication de l'environnement et mise en place sur Linux.md
+    - Kubernetes/Chap 1 Introduction Kubernetes/e) Présentation du dashboard Minikube et Kubectl.md
+    - Kubernetes/Chap 1 Introduction Kubernetes/I) Introduction à Kubernetes.md
+    - Kubernetes/Chap 2 Introduction aux principaux objets Kubernetes/a) Les Objets Kubernetes.md
+    - Kubernetes/Chap 2 Introduction aux principaux objets Kubernetes/b) Décrire les objets Kubernetes (objet spec).md
+    - Kubernetes/Chap 2 Introduction aux principaux objets Kubernetes/c) Introduction aux Pods.md
+    - Kubernetes/Chap 2 Introduction aux principaux objets Kubernetes/d) Introduction aux déploiement (Deployments).md
+    - Kubernetes/Chap 2 Introduction aux principaux objets Kubernetes/e) Introduction aux Services.md
+    - Kubernetes/Chap 2 Introduction aux principaux objets Kubernetes/Introduction au principaux objets Kubernetes.md
+    - Kubernetes/Chap 3 Les fondamentaux sur les objets Kubernetes/a) Cycle de vie des Pods et des conteneurs.md
+    - Kubernetes/Chap 3 Les fondamentaux sur les objets Kubernetes/b)Les labels et les sélecteurs.md
+    - Kubernetes/Chap 3 Les fondamentaux sur les objets Kubernetes/c)Les ReplicaSets.md
+    - Kubernetes/Chap 3 Les fondamentaux sur les objets Kubernetes/d)Les Déployments en détail.md
+    - Kubernetes/Chap 3 Les fondamentaux sur les objets Kubernetes/e)Les Services en détail.md
+    - Kubernetes/Chap 3 Les fondamentaux sur les objets Kubernetes/f)Les Namespaces.md
+    - Kubernetes/Chap 3 Les fondamentaux sur les objets Kubernetes/Les fondamentaux sur les objets Kubernetes.md
+    - Kubernetes/Chap 4 Projet 1/Projet 1 utiliser des images personnalisées avec k8s localement.md
+    - Kubernetes/Chap 5 Introduction Aux Ingress/a) Qu'est ce qu'un Ingress ?.md
+    - Kubernetes/Chap 5 Introduction Aux Ingress/b) Les Composants d'un Ingress.md
+    - Kubernetes/Chap 5 Introduction Aux Ingress/c) Les règles Ingress.md
+    - Kubernetes/Chap 5 Introduction Aux Ingress/d) Utiliser un Ingress avec Minikube.md
+    - Kubernetes/Chap 5 Introduction Aux Ingress/Introduction aux Ingress.md
+    - Kubernetes/Chap 6 Projet 2/Projet 2 Premier cluster (DOKS).md
+    - Kubernetes/Chap 7 Les sondes Probs/a) Introduction aux sondes.md
+    - Kubernetes/Chap 7 Les sondes Probs/b) Configurer une seconde vitalité (liveness probe).md
+    - Kubernetes/Chap 7 Les sondes Probs/c) Configurer une sonde de démarrage (startup probe).md
+    - Kubernetes/Chap 7 Les sondes Probs/d) Configurer une sonde de préparation (readiness probe).md
+    - Kubernetes/Chap 7 Les sondes Probs/e) Utiliser d'autre sondes (TCP, exec, gRPC).md
+    - Kubernetes/Chap 7 Les sondes Probs/Les Sondes (probs).md
+    - Kubernetes/Chap 8 Gestion des ressources/Gestion des Ressources.md
+    - Kubernetes/Chap 9 Introduction a la persistance/Introduction à la persistance.md
+    - Kubernetes/Sommaire.md
