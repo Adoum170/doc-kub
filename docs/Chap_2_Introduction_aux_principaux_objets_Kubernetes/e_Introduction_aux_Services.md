@@ -47,8 +47,7 @@ Les **labels** (paires clé/valeur) sont utilisés pour :
 
 Un Service avec le sélecteur `app: A` cible tous les Pods ayant ce label, y compris ceux créés par un Deployment ou un ReplicaSet.
 
-![[Service.png]]  
-(Schéma montrant un Service sélectionnant des Pods via un label.)
+![Schéma montrant un Service sélectionnant des Pods via un label.](image/Service.png)
 
 ---
 

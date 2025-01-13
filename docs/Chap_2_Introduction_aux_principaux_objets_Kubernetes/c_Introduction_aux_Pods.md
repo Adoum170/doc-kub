@@ -25,8 +25,7 @@ Les **Pods** sont les plus petites unités déployables dans Kubernetes. Ils rep
     - **Volumes** : pour un stockage commun.
     - **Ressources réseau** : comme une adresse IP partagée.
 
-![[PodX.png]]  
-(Schéma d’un Pod avec conteneurs et volumes.)
+![Schéma d’un Pod avec conteneurs et volumes.](image/PodX.png)
 
 ---
 
