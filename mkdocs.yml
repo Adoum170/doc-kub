@@ -1,11 +1,18 @@
 site_name: Kubernetes Documentation
+site_url: https://Adoum170.github.io/doc-kub
+site_author: Adoum170
+site_description: Documentation sur Kubernetes
+site_favicon: https://kubernetes.io/images/favicon.png
+
+repo_name: Kubernetes_Documentation
+repo_url: https://Adoum170.github.io/doc-kub
 
 theme:
   name: material
 
 nav:
   - Chap_1_Introduction_Kubernetes:
-    - Chap_1_Introduction_Kubernetes/a_Introduction_à_la_Stack_DevOps.md
+    - Chap_1_Introduction_Kubernetes/index.md
     - Chap_1_Introduction_Kubernetes/e_Présentation_du_dashboard_Minikube_et_Kubectl.md
     - Chap_1_Introduction_Kubernetes/c_L'architecture_de_Kubernetes.md
     - Chap_1_Introduction_Kubernetes/b_Qu'est_ce_que_Kubernetes.md
