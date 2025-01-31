@@ -2,7 +2,7 @@ site_name: Kubernetes Documentation
 site_url: https://Adoum170.github.io/doc-kub
 site_author: Adoum170
 site_description: Documentation sur Kubernetes
-site_favicon: https://kubernetes.io/images/favicon.png
+favicon: https://kubernetes.io/images/favicon.png
 
 repo_name: Kubernetes_Documentation
 repo_url: https://Adoum170.github.io/doc-kub
