@@ -1,5 +1,5 @@
 ---
-title: Sommaire
+title: Introduction aux principaux objets Kubernetes
 ---
 
 - [Les Objets Kubernetes](a_Les_Objets_Kubernetes.md)
