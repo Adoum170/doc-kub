@@ -1,10 +1,10 @@
 ---
+title: Qu'est-ce que Kubernetes ?
 tags:
   - "#Intro_Kub/Qu_est_ce_que_K8s"
 ---
-***
 
-#### Qu'est ce que Kubernetes ?
+## Qu'est ce que Kubernetes ?
 
 **Kubernetes**, souvent abrégé en **K8s** (un numéronyme où 8 représente les lettres entre "K" et "s", comme i18n pour internationalisation), est une plateforme **open-source** écrite en Go, utilisée pour l'orchestration de conteneurs. Il permet de déployer, gérer et superviser des applications conteneurisées à grande échelle.
 
@@ -47,7 +47,7 @@ tags:
 
 De nombreux fournisseurs cloud proposent des services Kubernetes managés. Ces plateformes simplifient l'utilisation de Kubernetes en prenant en charge les tâches liées à l'infrastructure (installation, maintenance, mises à jour, etc.).
 
-##### Principaux services managés :
+##### Principaux services managés
 
 - **Google Kubernetes Engine (GKE)** : Intégration native avec Google Cloud.
 - **Amazon Elastic Kubernetes Service (EKS)** : S’intègre avec des services AWS comme ELB et RDS.
@@ -59,7 +59,7 @@ De nombreux fournisseurs cloud proposent des services Kubernetes managés. Ces p
 - **Scaleway Kubernetes Kapsule** : Service managé avec focus sur la simplicité.
 - **Scaleway Kubernetes Kosmos** : Permet d'exploiter des ressources multi-cloud.
 
-##### Alternative notable :
+##### Alternative notable
 
 - **Anthos** de Google : Fonctionne sur le principe du multi-cloud et hybride.
 
