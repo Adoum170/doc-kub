@@ -1,10 +1,10 @@
 ---
+title: Introduction à la Stack DevOps
 tags:
   - "#Intro_Kub/Stack_DevOps"
 ---
-***
 
-#### **Qu'est-ce que le DevOps ?**
+## **Qu'est-ce que le DevOps ?**
 
 Le **DevOps** est une philosophie et un ensemble de pratiques visant à améliorer la collaboration entre le **développement logiciel** (Dev) et les **opérations informatiques** (Ops). Ce terme a été inventé en 2007 par Patrick Debois, un ingénieur belge.
 
@@ -26,19 +26,14 @@ Le **DevOps** est une philosophie et un ensemble de pratiques visant à amélior
 ### **Principes clés du DevOps**
 
 1. **Intégration continue (CI) :**
-    
     - Les développeurs intègrent fréquemment leur code dans un dépôt partagé, avec tests automatiques pour détecter rapidement les problèmes.
 2. **Livraison continue (CD) :**
-    
     - Les modifications validées sont automatiquement déployées dans des environnements intermédiaires ou de production.
 3. **Infrastructure as Code (IaC) :**
-    
     - Gestion de l'infrastructure via des fichiers de configuration, permettant une réplication et une mise à l'échelle rapides.
 4. **Surveillance et journalisation :**
-    
     - Analyse continue des performances des applications et des infrastructures pour détecter et corriger les anomalies.
 5. **Culture de la rétroaction :**
-    
     - Encouragement à collecter les retours d’expérience pour améliorer les processus.
 
 ---
@@ -49,51 +44,51 @@ Le **DevOps** est une philosophie et un ensemble de pratiques visant à amélior
 
 - **Objectif :** Gestion des projets et suivi des tâches.
 - **Outils principaux :**
-    - GitLab
-    - GitHub
-    - Jira
+  - GitLab
+  - GitHub
+  - Jira
 
 #### **2. Gestion du code (Contrôle de version)**
 
 - **Objectif :** Versionner le code pour faciliter la collaboration et éviter les conflits.
 - **Outils principaux :**
-    - GitHub
-    - GitLab
-    - Bitbucket
+  - GitHub
+  - GitLab
+  - Bitbucket
 
 #### **3. Intégration continue / Déploiement continu (CI/CD)**
 
 - **Objectif :** Automatiser le pipeline de développement (build, test, déploiement).
 - **Outils principaux :**
-    - Jenkins
-    - GitLab CI/CD
-    - GitHub Actions
-    - CircleCI
-    - Travis CI
+  - Jenkins
+  - GitLab CI/CD
+  - GitHub Actions
+  - CircleCI
+  - Travis CI
 
 #### **4. Gestion de l'infrastructure**
 
 - **Objectif :** Automatiser la configuration et l'orchestration des serveurs et clusters.
 - **Outils principaux :**
-    - **Docker :** Conteneurisation des applications.
-    - **Kubernetes :** Orchestration des conteneurs.
-    - **Terraform :** Provisionnement d'infrastructure via IaC.
-    - **Ansible :** Gestion de configuration des serveurs.
+  - **Docker :** Conteneurisation des applications.
+  - **Kubernetes :** Orchestration des conteneurs.
+  - **Terraform :** Provisionnement d'infrastructure via IaC.
+  - **Ansible :** Gestion de configuration des serveurs.
 
 #### **5. Surveillance et retour d'information**
 
 - **Objectif :** Suivre les performances et détecter les problèmes en temps réel.
 - **Outils principaux :**
-    - **Prometheus :** Monitoring des métriques.
-    - **Grafana :** Visualisation des données et création de tableaux de bord.
-    - **ELK Stack (Elasticsearch, Logstash, Kibana) :** Analyse et visualisation des logs.
-    - **Autres :** Datadog, Nagios, New Relic, Sentry.
+  - **Prometheus :** Monitoring des métriques.
+  - **Grafana :** Visualisation des données et création de tableaux de bord.
+  - **ELK Stack (Elasticsearch, Logstash, Kibana) :** Analyse et visualisation des logs.
+  - **Autres :** Datadog, Nagios, New Relic, Sentry.
 
 ---
 
 ### **Schéma classique du DevOps**
 
-![[DevOps.png]] _(Insérez ici l'image si utilisée dans Obsidian)_
+![](images/DevOps.png)
 
 ---
 
