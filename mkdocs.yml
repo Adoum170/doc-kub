@@ -27,56 +27,56 @@ nav:
     - Chap_2_Introduction_aux_principaux_objets_Kubernetes/a_Les_Objets_Kubernetes.md
     - Chap_2_Introduction_aux_principaux_objets_Kubernetes/c_Introduction_aux_Pods.md
     - Chap_2_Introduction_aux_principaux_objets_Kubernetes/b_Décrire_les_objets_Kubernetes_objet_spec.md
-  - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes:
-    - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/dLes_Déployments_en_détail.md
-    - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/bLes_labels_et_les_sélecteurs.md
-    - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/fLes_Namespaces.md
-    - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/cLes_ReplicaSets.md
-    - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/a_Cycle_de_vie_des_Pods_et_des_conteneurs.md
-    - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/Les_fondamentaux_sur_les_objets_Kubernetes.md
-    - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/eLes_Services_en_détail.md
-  - Chap_4_Projet_1:
-    - Chap_4_Projet_1/Projet_1_utiliser_des_images_personnalisées_avec_k8s_localement.md
-  - Chap_5_Introduction_Aux_Ingress:
-    - Chap_5_Introduction_Aux_Ingress/d_Utiliser_un_Ingress_avec_Minikube.md
-    - Chap_5_Introduction_Aux_Ingress/Introduction_aux_Ingress.md
-    - Chap_5_Introduction_Aux_Ingress/b_Les_Composants_d'un_Ingress.md
-    - Chap_5_Introduction_Aux_Ingress/c_Les_règles_Ingress.md
-    - Chap_5_Introduction_Aux_Ingress/a_Qu'est_ce_qu'un_Ingress_?.md
-  - Chap_6_Projet_2:
-    - Chap_6_Projet_2/Projet_2_Premier_cluster_DOKS.md
-  - Chap_7_Les_sondes_Probs:
-    - Chap_7_Les_sondes_Probs/a_Introduction_aux_sondes.md
-    - Chap_7_Les_sondes_Probs/c_Configurer_une_sonde_de_démarrage_startup_probe.md
-    - Chap_7_Les_sondes_Probs/b_Configurer_une_seconde_vitalité_liveness_probe.md
-    - Chap_7_Les_sondes_Probs/d_Configurer_une_sonde_de_préparation_readiness_probe.md
-    - Chap_7_Les_sondes_Probs/e_Utiliser_d'autre_sondes_TCP,_exec,_gRPC.md
-    - Chap_7_Les_sondes_Probs/Les_Sondes_probs.md
-    - Chap_7_Les_sondes_Probs/Les_Sondes_(probs).md
-  - Chap_8_Gestion_des_ressources:
-    - Chap_8_Gestion_des_ressources/Gestion_des_Ressources.md
-  - Chap_9_Introduction_a_la_persistance:
-    - Chap_9_Introduction_a_la_persistance/Introduction_à_la_persistance.md
-  - Chap_10_Projet_3:
-    - Chap_10_Projet_3/Projet_3_PV_PVC_et_StatefulSet_NGINX_PHP_MySQL_DOKS_et_AKS.md
-  - Chap_11_Gestion_des_configuration:
-    - Chap_11_Gestion_des_configuration/Gestion_des_configurations.md
-  - Chap_12_Projet_4:
-    - Chap_12_Projet_4/Projet_4_ConfigMap_et_Secret_AKS.md
-  - Chap_13_Ordonnancement_avancer_des_Pods_et_des_Nods:
-    - Chap_13_Ordonnancement_avancer_des_Pods_et_des_Nods/Ordonnancement_avancé_des_Pods_et_des_Nodes.md
-  - Chap_14_Loggin_et_monitoring_avec_kubernetes:
-    - Chap_14_Loggin_et_monitoring_avec_kubernetes/Logging_et_Monitoring_avec_Kubernetes.md
-  - Chap_15_Utilisation_de_TLS_avec_Kubernetes:
-    - Chap_15_Utilisation_de_TLS_avec_Kubernetes/Utilisation_de_TLS_avec_Kubernetes.md
-  - Chap_16_Les_taches_avec_Kubernetes:
-    - Chap_16_Les_taches_avec_Kubernetes/Les_tâches_avec_Kubernetes.md
-  - Chap_17_Introduction_avec_Helm:
-    - Chap_17_Introduction_avec_Helm/Introduction_à_Helm.md
-  - Chap_18_Projet_5:
-    - Chap_18_Projet_5/Projet_5_Projet_complet_GKE.md
-  - Chap_19_Git_Ops_avec_Argo_CD-GKE:
-    - Chap_19_Git_Ops_avec_Argo_CD-GKE/GitOps_avec_Argo_CD_GKE.md
+  # - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes:
+  #   - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/dLes_Déployments_en_détail.md
+  #   - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/bLes_labels_et_les_sélecteurs.md
+  #   - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/fLes_Namespaces.md
+  #   - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/cLes_ReplicaSets.md
+  #   - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/a_Cycle_de_vie_des_Pods_et_des_conteneurs.md
+  #   - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/Les_fondamentaux_sur_les_objets_Kubernetes.md
+  #   - Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/eLes_Services_en_détail.md
+  # - Chap_4_Projet_1:
+  #   - Chap_4_Projet_1/Projet_1_utiliser_des_images_personnalisées_avec_k8s_localement.md
+  # - Chap_5_Introduction_Aux_Ingress:
+  #   - Chap_5_Introduction_Aux_Ingress/d_Utiliser_un_Ingress_avec_Minikube.md
+  #   - Chap_5_Introduction_Aux_Ingress/Introduction_aux_Ingress.md
+  #   - Chap_5_Introduction_Aux_Ingress/b_Les_Composants_d'un_Ingress.md
+  #   - Chap_5_Introduction_Aux_Ingress/c_Les_règles_Ingress.md
+  #   - Chap_5_Introduction_Aux_Ingress/a_Qu'est_ce_qu'un_Ingress_?.md
+  # - Chap_6_Projet_2:
+  #   - Chap_6_Projet_2/Projet_2_Premier_cluster_DOKS.md
+  # - Chap_7_Les_sondes_Probs:
+  #   - Chap_7_Les_sondes_Probs/a_Introduction_aux_sondes.md
+  #   - Chap_7_Les_sondes_Probs/c_Configurer_une_sonde_de_démarrage_startup_probe.md
+  #   - Chap_7_Les_sondes_Probs/b_Configurer_une_seconde_vitalité_liveness_probe.md
+  #   - Chap_7_Les_sondes_Probs/d_Configurer_une_sonde_de_préparation_readiness_probe.md
+  #   - Chap_7_Les_sondes_Probs/e_Utiliser_d'autre_sondes_TCP,_exec,_gRPC.md
+  #   - Chap_7_Les_sondes_Probs/Les_Sondes_probs.md
+  #   - Chap_7_Les_sondes_Probs/Les_Sondes_(probs).md
+  # - Chap_8_Gestion_des_ressources:
+  #   - Chap_8_Gestion_des_ressources/Gestion_des_Ressources.md
+  # - Chap_9_Introduction_a_la_persistance:
+  #   - Chap_9_Introduction_a_la_persistance/Introduction_à_la_persistance.md
+  # - Chap_10_Projet_3:
+  #   - Chap_10_Projet_3/Projet_3_PV_PVC_et_StatefulSet_NGINX_PHP_MySQL_DOKS_et_AKS.md
+  # - Chap_11_Gestion_des_configuration:
+  #   - Chap_11_Gestion_des_configuration/Gestion_des_configurations.md
+  # - Chap_12_Projet_4:
+  #   - Chap_12_Projet_4/Projet_4_ConfigMap_et_Secret_AKS.md
+  # - Chap_13_Ordonnancement_avancer_des_Pods_et_des_Nods:
+  #   - Chap_13_Ordonnancement_avancer_des_Pods_et_des_Nods/Ordonnancement_avancé_des_Pods_et_des_Nodes.md
+  # - Chap_14_Loggin_et_monitoring_avec_kubernetes:
+  #   - Chap_14_Loggin_et_monitoring_avec_kubernetes/Logging_et_Monitoring_avec_Kubernetes.md
+  # - Chap_15_Utilisation_de_TLS_avec_Kubernetes:
+  #   - Chap_15_Utilisation_de_TLS_avec_Kubernetes/Utilisation_de_TLS_avec_Kubernetes.md
+  # - Chap_16_Les_taches_avec_Kubernetes:
+  #   - Chap_16_Les_taches_avec_Kubernetes/Les_tâches_avec_Kubernetes.md
+  # - Chap_17_Introduction_avec_Helm:
+  #   - Chap_17_Introduction_avec_Helm/Introduction_à_Helm.md
+  # - Chap_18_Projet_5:
+  #   - Chap_18_Projet_5/Projet_5_Projet_complet_GKE.md
+  # - Chap_19_Git_Ops_avec_Argo_CD-GKE:
+  #   - Chap_19_Git_Ops_avec_Argo_CD-GKE/GitOps_avec_Argo_CD_GKE.md
 
 ###
 # Tools
