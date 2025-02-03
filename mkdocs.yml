@@ -4,7 +4,7 @@ site_author: Adoum170
 site_description: Documentation sur Kubernetes
 
 repo_name: doc-kub
-repo_url: https://Adoum170.github.io/doc-kub
+repo_url: https://github.com/Adoum170/doc-kub
 
 theme:
   name: material
