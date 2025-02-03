@@ -12,13 +12,9 @@
         <meta name="author" content="Adoum170">
       
       
-        <link rel="canonical" href="https://Adoum170.github.io/doc-kub/Chap_2_Introduction_aux_principaux_objets_Kubernetes/a_Les_Objets_Kubernetes/">
+        <link rel="canonical" href="https://Adoum170.github.io/doc-kub/Chap_18_Projet_5/Introduction_%C3%A0_Helm/">
       
       
-        <link rel="prev" href="../">
-      
-      
-        <link rel="next" href="../b_D%C3%A9crire_les_objets_Kubernetes_objet_spec/">
       
       
       <link rel="icon" href="https://kubernetes.io/icons/favicon-64.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Les Objets Kubernetes - Kubernetes Documentation</title>
+        <title>Introduction à Helm - Kubernetes Documentation</title>
       
     
     
@@ -67,11 +63,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#fonctionnement-general-des-objets-kubernetes" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les Objets Kubernetes
+              Introduction à Helm
             
           </span>
         </div>
@@ -384,19 +375,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -410,7 +399,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Chap_2_Introduction_aux_principaux_objets_Kubernetes
@@ -424,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -442,28 +431,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Les Objets Kubernetes
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/a_Les_Objets_Kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -472,75 +443,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#fonctionnement-general-des-objets-kubernetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctionnement général des objets Kubernetes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#principaux-objets-kubernetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Principaux objets Kubernetes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification-et-statut-des-objets-kubernetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification et statut des objets Kubernetes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification et statut des objets Kubernetes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple-le-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple : Le Deployment
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resume" class="md-nav__link">
-    <span class="md-ellipsis">
-      Résumé
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -553,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../b_D%C3%A9crire_les_objets_Kubernetes_objet_spec/" class="md-nav__link">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/b_D%C3%A9crire_les_objets_Kubernetes_objet_spec/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../c_Introduction_aux_Pods/" class="md-nav__link">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/c_Introduction_aux_Pods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../d_Introduction_aux_d%C3%A9ploiement_Deployments/" class="md-nav__link">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/d_Introduction_aux_d%C3%A9ploiement_Deployments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../e_Introduction_aux_Services/" class="md-nav__link">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/e_Introduction_aux_Services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,65 +557,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#fonctionnement-general-des-objets-kubernetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctionnement général des objets Kubernetes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#principaux-objets-kubernetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Principaux objets Kubernetes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification-et-statut-des-objets-kubernetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification et statut des objets Kubernetes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification et statut des objets Kubernetes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple-le-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple : Le Deployment
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resume" class="md-nav__link">
-    <span class="md-ellipsis">
-      Résumé
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -727,99 +570,7 @@
                   
 
 
-  <h1>Les Objets Kubernetes</h1>
-
-<h4 id="fonctionnement-general-des-objets-kubernetes"><strong>Fonctionnement général des objets Kubernetes</strong></h4>
-<p>Les <strong>objets Kubernetes</strong> sont des entités persistantes utilisées pour représenter l’état de votre cluster. Ils servent à définir l’état désiré du système, et Kubernetes s’efforce constamment de faire correspondre l’état actuel à cet état désiré.</p>
-<ul>
-<li>
-<p><strong>Définition :</strong><br />
-    Un objet Kubernetes est un <strong>"enregistrement d'intention"</strong>. Une fois un objet créé, Kubernetes travaille automatiquement pour le maintenir en place.</p>
-</li>
-<li>
-<p><strong>Exemples d'état désiré :</strong></p>
-</li>
-<li>Faire fonctionner un conteneur (via des Pods).</li>
-<li>Gérer l’accès réseau aux applications (via des Services).</li>
-<li>Maintenir un certain nombre de réplicas en cours d’exécution (via des Deployments).</li>
-<li><strong>Interaction avec les objets :</strong> Les objets sont créés, modifiés ou supprimés en utilisant l’<strong>API Kubernetes</strong>. Les outils comme <strong>kubectl</strong> servent d’interface avec cette API.</li>
-</ul>
-<hr />
-<h4 id="principaux-objets-kubernetes"><strong>Principaux objets Kubernetes</strong></h4>
-<p>Voici une liste des objets fondamentaux que vous rencontrerez et utiliserez régulièrement :</p>
-<ol>
-<li><strong>Pod</strong> :<ul>
-<li>Représente l'unité de base d'exécution dans Kubernetes.</li>
-<li>Contient un ou plusieurs conteneurs partageant un même réseau et un espace de stockage.</li>
-</ul>
-</li>
-<li><strong>Service</strong> :<ul>
-<li>Abstraction définissant un ensemble logique de Pods.</li>
-<li>Fournit des mécanismes pour la découverte de services et l'équilibrage de charge.</li>
-</ul>
-</li>
-<li><strong>Volume</strong> :<ul>
-<li>Abstraction pour le stockage des données des conteneurs.</li>
-<li>Persiste même en cas de redémarrage des conteneurs.</li>
-</ul>
-</li>
-<li><strong>Namespace</strong> :<ul>
-<li>Permet de diviser un cluster Kubernetes en plusieurs clusters virtuels isolés.</li>
-<li>Utile pour organiser les ressources ou gérer des environnements multiples (dev, test, prod).</li>
-</ul>
-</li>
-<li><strong>Deployment</strong> :<ul>
-<li>Gère les déploiements d'applications sans état.</li>
-<li>Facilite les mises à jour, l’évolutivité et la gestion des réplicas de Pods.</li>
-</ul>
-</li>
-<li>
-<p><strong>StatefulSet</strong> :</p>
-<ul>
-<li>Gère les applications avec état (comme les bases de données).</li>
-<li>Maintient une identité unique pour chaque Pod.</li>
-<li><strong>DaemonSet</strong> :</li>
-<li>Assure qu’un Pod spécifique est en cours d’exécution sur tous (ou certains) nœuds d’un cluster.</li>
-<li>Utilisé pour des tâches comme la journalisation ou la supervision.</li>
-<li><strong>Job</strong> :</li>
-<li>Représente une tâche ponctuelle exécutée jusqu’à son achèvement.</li>
-<li><strong>CronJob</strong> :</li>
-<li>Programme l’exécution de tâches répétées à des intervalles définis.</li>
-</ul>
-</li>
-</ol>
-<hr />
-<h4 id="specification-et-statut-des-objets-kubernetes"><strong>Spécification et statut des objets Kubernetes</strong></h4>
-<p>Tous les objets Kubernetes comportent deux champs principaux :</p>
-<ol>
-<li><strong>Spec (Specification)</strong> :<ul>
-<li>Définit les caractéristiques et l’état souhaité de l’objet.</li>
-<li>Par exemple : nombre de réplicas pour un Deployment.</li>
-</ul>
-</li>
-<li><strong>Status (Statut)</strong> :<ul>
-<li>Décrit l’état actuel de l’objet.</li>
-<li>Mis à jour automatiquement par le système Kubernetes pour refléter l’état réel.</li>
-</ul>
-</li>
-</ol>
-<h5 id="exemple-le-deployment"><strong>Exemple : Le Deployment</strong></h5>
-<ul>
-<li><strong>Spec (État souhaité)</strong> :</li>
-<li>Vous configurez un Deployment pour qu’il exécute trois réplicas d’une application.</li>
-<li><strong>Status (État actuel)</strong> :</li>
-<li>Si l’un des Pods échoue, Kubernetes détecte la différence entre l’état souhaité (3 Pods) et l’état actuel (2 Pods). Il démarre alors une nouvelle instance pour rétablir la conformité avec la spécification.</li>
-</ul>
-<hr />
-<h4 id="resume"><strong>Résumé</strong></h4>
-<ul>
-<li><strong>Objets Kubernetes :</strong> Entités persistantes utilisées pour représenter et gérer l’état du cluster.</li>
-<li><strong>Principaux objets :</strong> Pods, Services, Deployments, StatefulSets, Volumes, etc.</li>
-<li><strong>Spécification vs Statut :</strong></li>
-<li>La <strong>spec</strong> déclare l’état souhaité.</li>
-<li>Le <strong>status</strong> reflète l’état réel, et Kubernetes travaille constamment à réduire l’écart entre les deux.</li>
-</ul>
-<p>Kubernetes automatise ainsi la gestion des ressources, permettant de maintenir un état stable même en cas de défaillance ou de changement.</p>
+  <h1>Introduction à Helm</h1>
 
 
 
@@ -827,8 +578,7 @@
 
 
 
-  
-  
+
 
 
 

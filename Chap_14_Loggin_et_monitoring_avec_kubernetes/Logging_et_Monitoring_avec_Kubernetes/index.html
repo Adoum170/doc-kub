@@ -6,16 +6,18 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Documentation sur Kubernetes">
+      
+      
+        <meta name="author" content="Adoum170">
+      
+      
+        <link rel="canonical" href="https://Adoum170.github.io/doc-kub/Chap_14_Loggin_et_monitoring_avec_kubernetes/Logging_et_Monitoring_avec_Kubernetes/">
       
       
       
-        <link rel="prev" href="../../Chap_13_Ordonnancement_avancer_des_Pods_et_des_Nods/Ordonnancement_avanc%C3%A9_des_Pods_et_des_Nodes/">
       
-      
-        <link rel="next" href="../../Chap_15_Utilisation_de_TLS_avec_Kubernetes/Utilisation_de_TLS_avec_Kubernetes/">
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="https://kubernetes.io/icons/favicon-64.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
@@ -75,8 +77,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Kubernetes Documentation" class="md-header__button md-logo" aria-label="Kubernetes Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="https://www.ovhcloud.com/sites/default/files/styles/text_media_horizontal/public/2021-04/K8S-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -143,6 +144,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://Adoum170.github.io/doc-kub" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doc-kub
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -170,12 +183,23 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Kubernetes Documentation" class="md-nav__button md-logo" aria-label="Kubernetes Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="https://www.ovhcloud.com/sites/default/files/styles/text_media_horizontal/public/2021-04/K8S-logo.png" alt="logo">
 
     </a>
     Kubernetes Documentation
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://Adoum170.github.io/doc-kub" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doc-kub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -221,11 +245,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Chap_1_Introduction_Kubernetes/a_Introduction_%C3%A0_la_Stack_DevOps/" class="md-nav__link">
+      <a href="../../Chap_1_Introduction_Kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    a Introduction à la Stack DevOps
+    Introduction à Kubernetes
   </span>
   
 
@@ -242,11 +266,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Chap_1_Introduction_Kubernetes/e_Pr%C3%A9sentation_du_dashboard_Minikube_et_Kubectl/" class="md-nav__link">
+      <a href="../../Chap_1_Introduction_Kubernetes/a_Introduction_%C3%A0_la_Stack_DevOps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    e Présentation du dashboard Minikube et Kubectl
+    Introduction à la Stack DevOps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chap_1_Introduction_Kubernetes/b_Qu-est_ce_que_Kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qu'est-ce que Kubernetes ?
   </span>
   
 
@@ -267,49 +312,7 @@
         
   
   <span class="md-ellipsis">
-    c L'architecture de Kubernetes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_1_Introduction_Kubernetes/b_Qu%27est_ce_que_Kubernetes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    b Qu'est ce que Kubernetes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_1_Introduction_Kubernetes/I_Introduction_%C3%A0_Kubernetes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    I Introduction à Kubernetes
+    Architecture de Kubernetes
   </span>
   
 
@@ -330,7 +333,28 @@
         
   
   <span class="md-ellipsis">
-    d Explication de l'environnement et mise en place sur Linux
+    Explication de l'environnement et mise en place sur Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chap_1_Introduction_Kubernetes/e_Pr%C3%A9sentation_du_dashboard_Minikube_et_Kubectl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Présentation du dashboard Minikube et Kubectl
   </span>
   
 
@@ -389,53 +413,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/d_Introduction_aux_d%C3%A9ploiement_Deployments/" class="md-nav__link">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    d Introduction aux déploiement Deployments
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/Introduction_au_principaux_objets_Kubernetes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction au principaux objets Kubernetes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/e_Introduction_aux_Services/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    e Introduction aux Services
+    Introduction aux principaux objets Kubernetes
   </span>
   
 
@@ -456,28 +438,7 @@
         
   
   <span class="md-ellipsis">
-    a Les Objets Kubernetes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/c_Introduction_aux_Pods/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    c Introduction aux Pods
+    Les Objets Kubernetes
   </span>
   
 
@@ -498,70 +459,7 @@
         
   
   <span class="md-ellipsis">
-    b Décrire les objets Kubernetes objet spec
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/dLes_D%C3%A9ployments_en_d%C3%A9tail/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    dLes Déployments en détail
+    Principaux objets et description d'un objet Kubernetes
   </span>
   
 
@@ -578,11 +476,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/bLes_labels_et_les_s%C3%A9lecteurs/" class="md-nav__link">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/c_Introduction_aux_Pods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    bLes labels et les sélecteurs
+    Introduction aux Pods
   </span>
   
 
@@ -599,11 +497,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/fLes_Namespaces/" class="md-nav__link">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/d_Introduction_aux_d%C3%A9ploiement_Deployments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    fLes Namespaces
+    Introduction aux déploiements (Deployments)
   </span>
   
 
@@ -620,1302 +518,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/cLes_ReplicaSets/" class="md-nav__link">
+      <a href="../../Chap_2_Introduction_aux_principaux_objets_Kubernetes/e_Introduction_aux_Services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    cLes ReplicaSets
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/a_Cycle_de_vie_des_Pods_et_des_conteneurs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    a Cycle de vie des Pods et des conteneurs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/Les_fondamentaux_sur_les_objets_Kubernetes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Les fondamentaux sur les objets Kubernetes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_3_Les_fondamentaux_sur_les_objets_Kubernetes/eLes_Services_en_d%C3%A9tail/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    eLes Services en détail
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_4_Projet_1
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_4_Projet_1
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_4_Projet_1/Projet_1_utiliser_des_images_personnalis%C3%A9es_avec_k8s_localement/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Projet 1 utiliser des images personnalisées avec k8s localement
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_5_Introduction_Aux_Ingress
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_5_Introduction_Aux_Ingress
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_5_Introduction_Aux_Ingress/d_Utiliser_un_Ingress_avec_Minikube/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    d Utiliser un Ingress avec Minikube
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_5_Introduction_Aux_Ingress/Introduction_aux_Ingress/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction aux Ingress
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_5_Introduction_Aux_Ingress/b_Les_Composants_d%27un_Ingress/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    b Les Composants d'un Ingress
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_5_Introduction_Aux_Ingress/c_Les_r%C3%A8gles_Ingress/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    c Les règles Ingress
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_5_Introduction_Aux_Ingress/a_Qu%27est_ce_qu%27un_Ingress_%3F/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    a Qu'est ce qu'un Ingress ?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_6_Projet_2
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_6_Projet_2
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_6_Projet_2/Projet_2_Premier_cluster_DOKS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Projet 2 Premier cluster DOKS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_7_Les_sondes_Probs
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_7_Les_sondes_Probs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_7_Les_sondes_Probs/a_Introduction_aux_sondes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    a Introduction aux sondes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_7_Les_sondes_Probs/c_Configurer_une_sonde_de_d%C3%A9marrage_startup_probe/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    c Configurer une sonde de démarrage startup probe
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_7_Les_sondes_Probs/b_Configurer_une_seconde_vitalit%C3%A9_liveness_probe/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    b Configurer une seconde vitalité liveness probe
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_7_Les_sondes_Probs/d_Configurer_une_sonde_de_pr%C3%A9paration_readiness_probe/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    d Configurer une sonde de préparation readiness probe
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_7_Les_sondes_Probs/e_Utiliser_d%27autre_sondes_TCP%2C_exec%2C_gRPC/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    e Utiliser d'autre sondes TCP, exec, gRPC
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_7_Les_sondes_Probs/Les_Sondes_probs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Les Sondes probs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_7_Les_sondes_Probs/Les_Sondes_%28probs%29/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Les Sondes (probs)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_8_Gestion_des_ressources
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_8_Gestion_des_ressources
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_8_Gestion_des_ressources/Gestion_des_Ressources/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Gestion des Ressources
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_9_Introduction_a_la_persistance
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_9_Introduction_a_la_persistance
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_9_Introduction_a_la_persistance/Introduction_%C3%A0_la_persistance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction à la persistance
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_10_Projet_3
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_10_Projet_3
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_10_Projet_3/Projet_3_PV_PVC_et_StatefulSet_NGINX_PHP_MySQL_DOKS_et_AKS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Projet 3 PV PVC et StatefulSet NGINX PHP MySQL DOKS et AKS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
-        
-          
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_11_Gestion_des_configuration
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_11_Gestion_des_configuration
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_11_Gestion_des_configuration/Gestion_des_configurations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Gestion des configurations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
-        
-          
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_12_Projet_4
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_12_Projet_4
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_12_Projet_4/Projet_4_ConfigMap_et_Secret_AKS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Projet 4 ConfigMap et Secret AKS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
-        
-          
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_13_Ordonnancement_avancer_des_Pods_et_des_Nods
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_13_Ordonnancement_avancer_des_Pods_et_des_Nods
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_13_Ordonnancement_avancer_des_Pods_et_des_Nods/Ordonnancement_avanc%C3%A9_des_Pods_et_des_Nodes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ordonnancement avancé des Pods et des Nodes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_14_Loggin_et_monitoring_avec_kubernetes
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_14">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_14_Loggin_et_monitoring_avec_kubernetes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Logging et Monitoring avec Kubernetes
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
-        
-          
-          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_15_Utilisation_de_TLS_avec_Kubernetes
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_15">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_15_Utilisation_de_TLS_avec_Kubernetes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_15_Utilisation_de_TLS_avec_Kubernetes/Utilisation_de_TLS_avec_Kubernetes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Utilisation de TLS avec Kubernetes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
-        
-          
-          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_16_Les_taches_avec_Kubernetes
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_16">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_16_Les_taches_avec_Kubernetes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_16_Les_taches_avec_Kubernetes/Les_t%C3%A2ches_avec_Kubernetes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Les tâches avec Kubernetes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
-        
-          
-          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_17_Introduction_avec_Helm
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_17_Introduction_avec_Helm
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_17_Introduction_avec_Helm/Introduction_%C3%A0_Helm/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction à Helm
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
-        
-          
-          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_18_Projet_5
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_18">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_18_Projet_5
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_18_Projet_5/Projet_5_Projet_complet_GKE/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Projet 5 Projet complet GKE
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
-        
-          
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chap_19_Git_Ops_avec_Argo_CD-GKE
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
-            <span class="md-nav__icon md-icon"></span>
-            Chap_19_Git_Ops_avec_Argo_CD-GKE
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Chap_19_Git_Ops_avec_Argo_CD-GKE/GitOps_avec_Argo_CD_GKE/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GitOps avec Argo CD GKE
+    Introduction aux Services
   </span>
   
 
